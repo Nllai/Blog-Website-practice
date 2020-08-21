@@ -1,9 +1,21 @@
 
 @import url("layout.css");
-@import url("nav.css");
 @import url("footer.css");
+@import url(https://weloveiconfonts.com/api/?family=brandico);
 @import url(https://weloveiconfonts.com/api/?family=zocial);
+@import url(https://weloveiconfonts.com/api/?family=iconicfill);
 
+body{
+    font-family: "Montserrat",Sans-serif;
+    font-size: 14px;
+    background-color:grey;
+    margin: auto;
+    padding: 10px;
+}
+.button{
+    width: 150px;
+    padding: 10px;
+}
 .title{
     font-size: 7vh;
     font-family: 'Permanent Marker', cursive;
@@ -36,7 +48,6 @@
 #navtitle{
     order: 1;
     grid-area: nav;
-   
 }
 #sidebarbox{
     order: 2;
@@ -144,8 +155,68 @@
         }
     }
     
-    [class*="zocial-"]:before {
-        font-family: 'zocial', sans-serif;
-      }
-    
+   /*4 Zocial icons*/
 
+[class*="zocial-"]:before {
+	color: grey;
+	display: inline-block;
+	font-family: 'zocial', sans-serif;
+	width: 2em;
+	
+  }
+  [class*="brandico-"]:before {
+	font-family: 'brandico', sans-serif;
+	color: grey;
+	display: inline-block;
+	width: 2em;
+	
+  }
+  [class*="iconicfill-"]:before {
+	font-family: 'IconicFill', sans-serif;
+	color: grey;
+	display: inline-block;
+	width: 2em;
+	
+  }
+
+
+    
+.listcolor{
+    font-size: 1.5vw;;
+    color:grey;
+    background-color: #F2F2F2;
+}
+
+nav{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    color: red;
+  }
+  footer{
+    height: 10vh;
+    padding: 10px;
+    background-color: grey;
+}
