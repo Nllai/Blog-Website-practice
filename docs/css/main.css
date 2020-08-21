@@ -1,0 +1,151 @@
+
+@import url("layout.css");
+@import url("nav.css");
+@import url("footer.css");
+@import url(https://weloveiconfonts.com/api/?family=zocial);
+
+.title{
+    font-size: 7vh;
+    font-family: 'Permanent Marker', cursive;
+}
+.subtitle{
+    font-size: 3vh;
+    font-family: "Montserrat",Sans-serif;
+    padding-bottom: 5px;
+}
+.container{
+    display: grid;
+    border: 2px solid red;
+    width: 100vw;
+  
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas:
+    "sd"
+    "main"
+    "ft"
+}
+.box{
+    display: flex;
+    border: 1px solid #8C8C8C;
+    background-color: #F2F2F2;
+    justify-content: start;
+    align-items: start;
+    
+    
+}
+#navtitle{
+    order: 1;
+    grid-area: nav;
+   
+}
+#sidebarbox{
+    order: 2;
+    grid-area: sd;
+   
+}
+#contentbox{
+    order: 3;
+    grid-area: main;
+}
+#nestedGrid{
+    display: grid;
+    grid-template-columns: 70vw;
+    grid-template-rows: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    }
+    .example{
+    width: 250px;
+    height: 150px;
+    border: 1px solid yellow;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    #one{
+    background-image: url('../images/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    }
+
+    #two{
+    background-image: url('../images/2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    }
+
+#footerbox{
+    order: 4;
+    grid-area: ft;
+}
+
+@media(min-width: 601px) and (max-width: 900px){
+    .container{
+        grid-template-columns: 30vw 50vw 20vw;
+        grid-template-rows: 60vh 10vh; 
+        grid-template-areas:
+       
+        "sd main main main "
+        "ft ft ft ft"
+    }
+    .box{
+        padding: 20px;
+    }
+    #headerbox{
+        order: 1;
+        grid-area: hd;   
+    }
+    #sidebarbox{
+        order: 2;
+        grid-area: sd;
+    }
+    #contentbox{
+        order: 3;
+        grid-area: main;  
+    }
+    #footerbox{
+        order: 4;
+        grid-area: ft; 
+    }
+}
+    @media(min-width: 901px){
+        .container{
+            grid-template-columns: 20vw 20vw 60vw;
+            grid-template-rows: 70vh 10vh;
+            grid-template-areas:
+            "sd main main main"
+            "ft ft ft ft"
+        }
+
+        .box{
+            padding: 10px;
+        }
+        #headerbox{
+            order: 1;
+            grid-area: hd;
+            
+        }
+        #sidebarbox{
+            order: 2;
+            grid-area: sd;
+          
+        }
+        #contentbox{
+            order: 3;
+            grid-area: main;
+            
+        }
+        #footerbox{
+            order: 4;
+            grid-area: ft;
+            
+        }
+    }
+    
+    [class*="zocial-"]:before {
+        font-family: 'zocial', sans-serif;
+      }
+    
+
